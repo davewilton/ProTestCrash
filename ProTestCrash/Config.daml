@@ -1,0 +1,64 @@
+﻿<ArcGIS defaultAssembly="ProTestCrash.dll" defaultNamespace="ProTestCrash" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{45203cb9-5bbf-49b4-8ae1-684ff3af7650}" version="1.0" desktopVersion="2.9.32739">
+    <Name>ProTestCrash</Name>
+    <Description>ProTestCrash description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>dwilton</Author>
+    <Company>Acme</Company>
+    <Date>1/24/2022 5:16:00 PM</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="ProTestCrash_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <tab id="ProTestCrash_Tab1" caption="Crash Pro Demo">
+          <group refID="ProTestCrash_Group1"/>
+        </tab>
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="ProTestCrash_Group1" caption="Group 1" appearsOnAddInTab="false">
+          <!-- host controls within groups -->
+          <button refID="ProTestCrash_Button1" size="large" />
+          <button refID="ProTestCrash_Button2" size="large" />
+          <button refID="ProTestCrash_Button3" size="large" />
+          <button refID="ProTestCrash_Button4" size="large" />
+          <button refID="ProTestCrash_Button5" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="ProTestCrash_Button1" caption="Demo 1 (no crash)" className="Button1" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">
+	          Crash Pro<disabledText />
+          </tooltip>
+        </button>
+        <button id="ProTestCrash_Button2" caption="Demo 2 (crash)" className="Button2" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+	        <tooltip heading="Tooltip Heading">
+		        Crash Pro<disabledText />
+	        </tooltip>
+        </button>
+        <button id="ProTestCrash_Button3" caption="Demo 3 (crash)" className="Button3" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+	        <tooltip heading="Tooltip Heading">
+		        Crash Pro<disabledText />
+	        </tooltip>
+        </button>
+        <button id="ProTestCrash_Button4" caption="Demo 4 (no crash)" className="Button4" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+	        <tooltip heading="Tooltip Heading">
+		        Crash Pro<disabledText />
+	        </tooltip>
+        </button>
+        <button id="ProTestCrash_Button5" caption="Demo 5 (crash)" className="Button5" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+	        <tooltip heading="Tooltip Heading">
+		        Crash Pro<disabledText />
+	        </tooltip>
+        </button>
+    
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
