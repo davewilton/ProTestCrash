@@ -37,6 +37,10 @@ namespace ProTestCrash
                     case "demo4": // fine
                         await ExampleTask4();
                         break;
+
+                    case "demo6": // fine
+                        ExampleTask6();
+                        break;
                 }
 
 
@@ -77,7 +81,6 @@ namespace ProTestCrash
             });
 
             await Task.Delay(2000);
-
         }
 
         private static async void ExampleTask3()
@@ -99,6 +102,29 @@ namespace ProTestCrash
 
             throw new Exception("An error occurred");
         }
+
+        private static async void ExampleTask6()
+        {
+            try
+            {
+                await QueuedTask.Run<bool>(() =>
+                {
+                    var i = 0;
+                    i = i / 0;
+                    return i > 0;
+                });
+
+                await Task.Delay(2000);
+
+            }
+            catch (Exception e)
+            {
+                // we can catch it, but we can't throw it up back to the caller
+                MessageBox.Show("Success!" + e.Message);
+            }
+
+        }
+
 
         // Helper that sets an exception async
         static Task ThrowAsync()

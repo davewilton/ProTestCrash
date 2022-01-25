@@ -28,6 +28,7 @@
           <button refID="ProTestCrash_Button3" size="large" />
           <button refID="ProTestCrash_Button4" size="large" />
           <button refID="ProTestCrash_Button5" size="large" />
+          <button refID="ProTestCrash_Button6" size="large" />
         </group>
       </groups>
       <controls>
@@ -57,7 +58,11 @@
 		        Crash Pro<disabledText />
 	        </tooltip>
         </button>
-    
+        <button id="ProTestCrash_Button6" caption="Demo 6 (no crash)" className="Button5" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+	        <tooltip heading="Tooltip Heading">
+		        Crash Pro<disabledText />
+	        </tooltip>
+        </button>
       </controls>
     </insertModule>
   </modules>

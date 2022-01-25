@@ -124,6 +124,7 @@
     <AddInContent Include="DarkImages\AddInDesktop32.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Button6.cs" />
     <Compile Include="Button5.cs" />
     <Compile Include="Button4.cs" />
     <Compile Include="Button3.cs" />
